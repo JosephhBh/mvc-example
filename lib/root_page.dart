@@ -64,6 +64,9 @@ class _RootPageState extends State<RootPage> {
       case AuthStatus.loggedIn:
         returnedScreen = HomePage();
         break;
+      case AuthStatus.notLoggedIn:
+        returnedScreen = HomePage();
+        break;
 
       default:
     }

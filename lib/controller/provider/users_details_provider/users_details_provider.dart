@@ -48,4 +48,12 @@ class UsersDetailsProvider extends ChangeNotifier {
     _isLoading = false;
     notifyListeners();
   }
+
+  handleSubmitButton(int value) {
+    if (value == 0) {
+      print('no value');
+    } else {
+      print('the value is  $value');
+    }
+  }
 }

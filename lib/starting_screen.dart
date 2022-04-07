@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mvcexample/constants/route_names.dart';
 import 'package:mvcexample/controller/device_utils/device_utils.dart';
 import 'package:mvcexample/controller/navigation/navigation_service.dart';
-import 'package:mvcexample/controller/provider/error_message_provider.dart';
+import 'package:mvcexample/controller/provider/error_message_provider/error_message_provider.dart';
 import 'package:mvcexample/locator.dart';
 import 'package:provider/provider.dart';
 
@@ -27,6 +27,7 @@ class _StartingSceenState extends State<StartingSceen> {
     super.initState();
     errorMessageProvider =
         Provider.of<ErrorMessageProvider>(context, listen: false);
+
     Timer(
       Duration(seconds: 1),
       () => _navigationService.navigateAndRemove(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mvcexample/controller/provider/users_details_provider.dart';
+import 'package:mvcexample/controller/provider/users_details_provider/users_details_provider.dart';
 import 'package:mvcexample/widgets/loading_widget/global_loading_widget.dart';
 import 'package:provider/provider.dart';
 

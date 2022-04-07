@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:mvcexample/constants/route_names.dart';
 import 'package:mvcexample/controller/navigation/navigation_service.dart';
 import 'package:mvcexample/controller/navigation/router.dart';
-import 'package:mvcexample/controller/provider/error_message_provider.dart';
-import 'package:mvcexample/controller/provider/users_details_provider.dart';
+import 'package:mvcexample/controller/provider/error_message_provider/error_message_provider.dart';
+import 'package:mvcexample/controller/provider/test_provide/test_provider.dart';
+import 'package:mvcexample/controller/provider/users_details_provider/users_details_provider.dart';
 import 'package:mvcexample/locator.dart';
 import 'package:provider/provider.dart';
 
@@ -28,6 +29,7 @@ class _MyAppState extends State<MyApp> {
       providers: [
         ChangeNotifierProvider(create: (context) => ErrorMessageProvider()),
         ChangeNotifierProvider(create: (context) => UsersDetailsProvider()),
+        ChangeNotifierProvider(create: (context) => TestProvider()),
       ],
       child: MaterialApp(
         navigatorKey: locator<NavigationService>().navigatorKey,

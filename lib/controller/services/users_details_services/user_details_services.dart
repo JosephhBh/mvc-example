@@ -10,7 +10,6 @@ class UsersDetailsService {
   Future<List<UsersModel>> getAllUsersService() async {
     try {
       var response = await http.get(Uri.parse(kUsersDetailsApi));
-      // print(response.body);
       if (response.statusCode != 200) {
         return [];
       } else {
@@ -22,7 +21,7 @@ class UsersDetailsService {
         return returnedResult;
       }
     } catch (e) {
-      print(e);
+      print("try catch $e");
       return [];
     }
   }
